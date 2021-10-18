@@ -1,7 +1,7 @@
 
-%Geometry = 'squareg'; % gives square [-1,1] x [-1,1]
+Geometry = 'squareg'; % gives square [-1,1] x [-1,1]
 
-Geometry = 'circleg'; % gives unit circle centered at origin
+%Geometry = 'circleg'; % gives unit circle centered at origin
 
 %Geometry = 'lshapeg'; % gives L-shape
 
