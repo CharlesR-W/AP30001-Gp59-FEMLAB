@@ -20,20 +20,20 @@ sig_ch=3e-11;
 mu_ch=pi*4e-7;
 
 % TODO: Define function coeffs
-material = @(x,y) [x^2+y^2 < 0.5]; % 1 if chicken, 0 if not
-coeffs = @(x,y) omega^2 * ( ...
-    material(x,y) * mu_ch *(eps_ch - 1i * sig_ch / omega) ...
-    + (1-material(x,y)) * mu_air * (eps_air - 1i * sig_air / omega) ...
-    );
-% TODO: Define function g
-TOL = 1e-10;
-
-%Original (rectangular) source
-micro_source = @(x,y) [abs(x-1) < TOL && abs(y) <= 0.5]; % original source
-
-%Circular source:
-%micro_source = @(x,y) [atan2(y,x) <= pi/8 && atan2(y,x) >= 0];
-g = @(x,y) micro_source(x,y) * 100;
+% material = @(x,y) [x^2+y^2 < 0.5]; % 1 if chicken, 0 if not
+% coeffs = @(x,y) omega^2 * ( ...
+%     material(x,y) * mu_ch *(eps_ch - 1i * sig_ch / omega) ...
+%     + (1-material(x,y)) * mu_air * (eps_air - 1i * sig_air / omega) ...
+%     );
+% % TODO: Define function g
+% TOL = 1e-10;
+% 
+% %Original (rectangular) source
+% micro_source = @(x,y) [abs(x-1) < TOL && abs(y) <= 0.5]; % original source
+% 
+% %Circular source:
+% %micro_source = @(x,y) [atan2(y,x) <= pi/8 && atan2(y,x) >= 0];
+% g = @(x,y) micro_source(x,y) * 100;
 
 
 %% RUN CODE

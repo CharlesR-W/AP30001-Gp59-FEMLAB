@@ -10,9 +10,9 @@ pdemesh(p,e,t); % plots the geometry and mesh
 
 [p,e,t] = refinemesh(Geometry,p,e,t); % gives gridrefinement
 % 
-[p,e,t] = refinemesh(Geometry,p,e,t); % gives second gridrefinement
+%[p,e,t] = refinemesh(Geometry,p,e,t); % gives second gridrefinement
 % 
-[p,e,t] = refinemesh(Geometry,p,e,t); % gives third gridrefinement
+%[p,e,t] = refinemesh(Geometry,p,e,t); % gives third gridrefinement
 % 
 % figure;
 pdemesh(p,e,t); % plots the geometry and mesh
