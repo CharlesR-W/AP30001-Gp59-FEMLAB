@@ -1,18 +1,18 @@
 
 %Geometry = 'squareg'; % gives square [-1,1] x [-1,1]
 
-% Geometry = 'circleg'; % gives unit circle centered at origin
+Geometry = 'circleg'; % gives unit circle centered at origin
 
-Geometry = 'lshapeg'; % gives L-shape
+%Geometry = 'lshapeg'; % gives L-shape
 
 [p,e,t] = initmesh(Geometry);
 pdemesh(p,e,t); % plots the geometry and mesh
 
-% [p,e,t] = refinemesh(Geometry,p,e,t); % gives gridrefinement
+[p,e,t] = refinemesh(Geometry,p,e,t); % gives gridrefinement
 % 
-% [p,e,t] = refinemesh(Geometry,p,e,t); % gives second gridrefinement
+[p,e,t] = refinemesh(Geometry,p,e,t); % gives second gridrefinement
 % 
-% [p,e,t] = refinemesh(Geometry,p,e,t); % gives third gridrefinement
+[p,e,t] = refinemesh(Geometry,p,e,t); % gives third gridrefinement
 % 
 % figure;
 pdemesh(p,e,t); % plots the geometry and mesh

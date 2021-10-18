@@ -27,8 +27,10 @@ coeffs = @(x,y) omega^2 * ( ...
     );
 % TODO: Define function g
 TOL = 1e-10;
-micro_source = @(x,y) [abs(x-1) < TOL && abs(y) <= 0.5];
+%micro_source = @(x,y) [abs(x-1) < TOL && abs(y) <= 0.5];
+micro_source = @(x,y) [atan2(y,x) <= pi/8 && atan2(y,x) >= 0];
 g = @(x,y) micro_source(x,y) * 100;
+
 
 %% RUN CODE
 AP3001Mesh1
